@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LRt-Th-2II">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Conversion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhM-a4-b04">
+                                <rect key="frame" x="103.33333333333333" y="69" width="186.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temerature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REH-Rj-laJ">
+                                <rect key="frame" x="16" y="116.66666666666667" width="87" height="21.000000000000014"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Conversion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y3-bh-XCs">
+                                <rect key="frame" x="16" y="152" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Temperature" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17B-x1-f4a">
+                                <rect key="frame" x="111" y="110" width="266" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="EnterTemp:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="mys-cO-ymH"/>
+                                    <action selector="textField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lMD-8c-IbC"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6Y-vH-vbl">
+                                <rect key="frame" x="162" y="260" width="69" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="C to F"/>
+                                <connections>
+                                    <action selector="celToFah:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sWK-ot-q4k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoY-uv-Cod">
+                                <rect key="frame" x="162" y="303" width="69" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="F to C"/>
+                                <connections>
+                                    <action selector="fahToCel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XCt-fD-HDi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT4-qa-dDF">
+                                <rect key="frame" x="163" y="346" width="68" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IX7-Px-7eK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDC-DX-dyI">
+                                <rect key="frame" x="111" y="160" width="266" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lhM-a4-b04" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ZH-fL-8m7"/>
+                            <constraint firstItem="lhM-a4-b04" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="69" id="0pt-1z-PZa"/>
+                            <constraint firstItem="6y3-bh-XCs" firstAttribute="trailing" secondItem="REH-Rj-laJ" secondAttribute="trailing" id="2OQ-5T-yc7"/>
+                            <constraint firstItem="17B-x1-f4a" firstAttribute="top" secondItem="lhM-a4-b04" secondAttribute="bottom" constant="20" id="aAL-YQ-OQ2"/>
+                            <constraint firstItem="REH-Rj-laJ" firstAttribute="centerY" secondItem="17B-x1-f4a" secondAttribute="centerY" id="auL-Gv-P9y"/>
+                            <constraint firstItem="17B-x1-f4a" firstAttribute="leading" secondItem="REH-Rj-laJ" secondAttribute="trailing" constant="8" symbolic="YES" id="ixC-Pb-vdf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="17B-x1-f4a" secondAttribute="trailing" constant="16" id="nA0-Lg-lt4"/>
+                            <constraint firstItem="REH-Rj-laJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qG6-tn-kjY"/>
+                            <constraint firstItem="TDC-DX-dyI" firstAttribute="leading" secondItem="17B-x1-f4a" secondAttribute="leading" id="rYM-hr-Dh6"/>
+                            <constraint firstItem="TDC-DX-dyI" firstAttribute="trailing" secondItem="17B-x1-f4a" secondAttribute="trailing" id="tjC-bk-fGq"/>
+                            <constraint firstItem="6y3-bh-XCs" firstAttribute="leading" secondItem="REH-Rj-laJ" secondAttribute="leading" id="u0M-d7-6dW"/>
+                            <constraint firstItem="TDC-DX-dyI" firstAttribute="top" secondItem="6y3-bh-XCs" secondAttribute="top" id="v88-XR-bKs"/>
+                            <constraint firstItem="6y3-bh-XCs" firstAttribute="top" secondItem="17B-x1-f4a" secondAttribute="bottom" constant="16" id="y5F-mi-RQe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TempTextField" destination="8bC-Xf-vdC" id="upn-Na-Bsg"/>
+                        <outlet property="resultLabel" destination="TDC-DX-dyI" id="o4T-Xo-qZW"/>
+                        <outlet property="tempTextField" destination="17B-x1-f4a" id="RIc-sP-qv8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="100.70422535211269"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qOh-gb-zW8">
+            <objects>
+                <viewController id="LRt-Th-2II" customClass="ViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Di-u6-DrC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Conversion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5a-m0-oqy">
+                                <rect key="frame" x="103.33333333333333" y="69" width="186.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temerature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ5-Jg-7DC">
+                                <rect key="frame" x="16" y="116.66666666666667" width="87" height="21.000000000000014"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Conversion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7Q-zL-O9b">
+                                <rect key="frame" x="16" y="152" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Conversion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJA-Pl-eA3">
+                                <rect key="frame" x="16" y="209" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Temperature" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppO-re-RmN">
+                                <rect key="frame" x="111" y="110" width="266" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Q4-vG-42j">
+                                <rect key="frame" x="111" y="160" width="266" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X9c-h4-6S5">
+                                <rect key="frame" x="237" y="204" width="110" height="32"/>
+                                <segments>
+                                    <segment title="C to F"/>
+                                    <segment title="F to C"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKo-Sn-5Ui">
+                                <rect key="frame" x="36" y="343" width="68" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="LRt-Th-2II" eventType="touchUpInside" id="ECU-2J-4Wy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yg9-No-4KV">
+                                <rect key="frame" x="262" y="343" width="95" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="LRt-Th-2II" eventType="touchUpInside" id="VOE-TK-qlu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="odL-L4-Hcp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X9c-h4-6S5" firstAttribute="top" secondItem="6Q4-vG-42j" secondAttribute="bottom" constant="23" id="0Jg-c4-asE"/>
+                            <constraint firstItem="ppO-re-RmN" firstAttribute="leading" secondItem="HQ5-Jg-7DC" secondAttribute="trailing" constant="8" symbolic="YES" id="2Ho-b5-rvf"/>
+                            <constraint firstItem="yg9-No-4KV" firstAttribute="leading" secondItem="WKo-Sn-5Ui" secondAttribute="trailing" constant="158" id="4m8-pe-sZC"/>
+                            <constraint firstItem="WKo-Sn-5Ui" firstAttribute="leading" secondItem="odL-L4-Hcp" secondAttribute="leading" constant="36" id="6Ub-X9-bT9"/>
+                            <constraint firstItem="odL-L4-Hcp" firstAttribute="trailing" secondItem="yg9-No-4KV" secondAttribute="trailing" constant="36" id="Ful-TN-PYt"/>
+                            <constraint firstItem="YJA-Pl-eA3" firstAttribute="centerY" secondItem="X9c-h4-6S5" secondAttribute="centerY" id="HNc-3F-39n"/>
+                            <constraint firstItem="yg9-No-4KV" firstAttribute="top" secondItem="X9c-h4-6S5" secondAttribute="bottom" constant="108" id="Hjr-wD-we9"/>
+                            <constraint firstItem="E5a-m0-oqy" firstAttribute="centerX" secondItem="0Di-u6-DrC" secondAttribute="centerX" id="Jtj-b9-fe3"/>
+                            <constraint firstItem="odL-L4-Hcp" firstAttribute="trailing" secondItem="ppO-re-RmN" secondAttribute="trailing" constant="16" id="Pwt-xi-IXI"/>
+                            <constraint firstItem="odL-L4-Hcp" firstAttribute="trailing" secondItem="X9c-h4-6S5" secondAttribute="trailing" constant="46" id="YIw-SZ-88Q"/>
+                            <constraint firstItem="6Q4-vG-42j" firstAttribute="leading" secondItem="ppO-re-RmN" secondAttribute="leading" id="Yag-PG-oAm"/>
+                            <constraint firstItem="WKo-Sn-5Ui" firstAttribute="top" secondItem="YJA-Pl-eA3" secondAttribute="bottom" constant="113" id="Z7G-jS-GCD"/>
+                            <constraint firstItem="ppO-re-RmN" firstAttribute="top" secondItem="E5a-m0-oqy" secondAttribute="bottom" constant="20" id="ZD7-nz-hHb"/>
+                            <constraint firstItem="q7Q-zL-O9b" firstAttribute="leading" secondItem="HQ5-Jg-7DC" secondAttribute="leading" id="cGp-aJ-NuX"/>
+                            <constraint firstItem="6Q4-vG-42j" firstAttribute="top" secondItem="q7Q-zL-O9b" secondAttribute="top" id="d7U-qF-abk"/>
+                            <constraint firstItem="E5a-m0-oqy" firstAttribute="top" secondItem="0Di-u6-DrC" secondAttribute="top" constant="69" id="rtn-Vs-M2p"/>
+                            <constraint firstItem="HQ5-Jg-7DC" firstAttribute="centerY" secondItem="ppO-re-RmN" secondAttribute="centerY" id="tqj-di-Epi"/>
+                            <constraint firstItem="YJA-Pl-eA3" firstAttribute="leading" secondItem="odL-L4-Hcp" secondAttribute="leading" constant="16" id="uct-rb-j5U"/>
+                            <constraint firstItem="q7Q-zL-O9b" firstAttribute="trailing" secondItem="HQ5-Jg-7DC" secondAttribute="trailing" id="umD-oa-GyW"/>
+                            <constraint firstItem="q7Q-zL-O9b" firstAttribute="top" secondItem="ppO-re-RmN" secondAttribute="bottom" constant="16" id="vGA-0y-jET"/>
+                            <constraint firstItem="yg9-No-4KV" firstAttribute="leading" secondItem="WKo-Sn-5Ui" secondAttribute="trailing" constant="158" id="vkC-ER-Dji"/>
+                            <constraint firstItem="HQ5-Jg-7DC" firstAttribute="leading" secondItem="odL-L4-Hcp" secondAttribute="leading" constant="16" id="w09-gq-5ks"/>
+                            <constraint firstItem="6Q4-vG-42j" firstAttribute="trailing" secondItem="ppO-re-RmN" secondAttribute="trailing" id="zwf-TN-osv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TempTextField" destination="0Di-u6-DrC" id="kuz-8u-2pV"/>
+                        <outlet property="conversionSegment" destination="X9c-h4-6S5" id="bHV-mP-w7u"/>
+                        <outlet property="resultLabel" destination="6Q4-vG-42j" id="nCY-hV-ajm"/>
+                        <outlet property="tempTextField" destination="ppO-re-RmN" id="69T-8U-X6Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8E-o9-SPO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090.8396946564885" y="100.70422535211269"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
